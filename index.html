@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Currency Converter</title>
+	<style type="text/css">
+		.outer_rec_box{			
+			height: 800px;
+			width: auto;
+			background-image: url(money.jpg);
+		}
+		h1{
+  			text-shadow: 0 0 3px #FFF000, 0 0 5px #0000FF;
+		}
+		.header{			
+			width: auto;
+			height: 80px;
+			background-image: linear-gradient(white,white);	
+		}
+		.input_rec_box{
+			float: left;
+			margin-left: 170px;
+			margin-top: 100px;
+			height: 150px;
+			width: 950px;
+			border-radius: 25px;
+			background-image: linear-gradient(white,white)
+		}
+		input,select{
+			height: 40px;
+			width:220px;
+			margin-top: 10px;
+			border-radius: 50px;
+			margin-left: 20px;
+		}
+		label{
+			margin-left: 20px;
+			font-size: 24px;
+			color: grey;
+  			text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+		}
+		.input_content{
+			margin-top: 20px;
+			float: left;
+		}
+		option{
+			font-size: 18px;
+			font-style: italic;
+		}
+		button{
+			background-image: linear-gradient(blue,blue);
+			height: 40px;
+			width:100px;
+			border-radius: 100px
+		}
+		.output_rec_box{
+			float: left;
+			clear: both;			
+			margin-left: 170px;
+			margin-top: 100px;
+			height: 300px;
+			width: 950px;
+			border-radius: 25px;
+			background-image: linear-gradient(white,white,grey)
+		}
+		.inner_output{
+			float: left;			
+			height: 100px;
+			width: 450px;
+			border-radius: 50px;
+			margin-top: 30px
+		}
+		.input_width{
+			width: 350px;
+		}
+		.label_margin{
+			margin-top: 100px;
+			padding-top: 50px;
+		}
+		.output_margin{
+			float: left;			
+			height: 100px;
+			width: 450px;
+			border-radius: 50px;
+			margin-top: 30px;
+			margin-left:200px;
+		}
+	</style>
+</head>
+<body >
+	<div class="header">
+		<h1 style="text-align: center;">CURRENCY CONVERTER</h1>
+	</div>
+	<div class="outer_rec_box">		
+		<div class="input_rec_box"> 
+			<div class="input_content">
+				<label for="amount">Amount</label><br>
+				<input style="font-size: 20px;text-align: center;" type="number" name="amount" id="amount">
+			</div>
+			<div class="input_content">
+				<label for="from" style="">From</label><br> 
+				<select id="from">
+				  	<option value="INR">INR</option>
+				  	<option value="USD">USD</option>
+				  	<option value="GBP">GBP</option>
+				  	<option value="CAD">CAD</option>
+				  	<option value="EUR">EUR</option>
+				  	<option value="MXN">MXN</option>
+				  	<option value="NOK">NOK</option>
+				  	<option value="JPY">JPY</option>
+				</select>
+			</div>
+			<div class="input_content">
+				<label for="to" style="">To</label><br> 
+				<select id="to">
+					<option value="INR">INR</option>
+				  	<option value="USD">USD</option>
+				  	<option value="GBP">GBP</option>
+				  	<option value="CAD">CAD</option>
+				  	<option value="EUR">EUR</option>
+				  	<option value="MXN">MXN</option>
+				  	<option value="NOK">NOK</option>
+				  	<option value="JPY">JPY</option>
+				</select>
+			</div>
+			<div style="margin-top: 55px;margin-left: 20px" class="input_content">
+				<button id="print_currency">Convert</button>
+			</div>
+		</div>
+		<div class="output_rec_box">
+			<div class="inner_output">
+				<label for="output_amount" class="label_margin">Amount</label><br>
+				<input style="font-size: 20px;text-align: center;" type="text" name="output_amount" id="output_amount" class="input_width">
+			</div>
+			<div class="inner_output">
+				<label for="output_converted_to" >Converted To</label><br>
+				<input style="font-size: 20px;text-align: center;" type="text" name="output_amount" id="output_converted_to" class="input_width">
+			</div>			
+				
+			<div class="output_margin" style="background-image: linear-gradient(white,yellow); text-align: center;">				
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
